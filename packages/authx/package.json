@@ -28,7 +28,7 @@
     "koa": "^2.13.0",
     "koa-body": "^4.2.0",
     "koa-router": "^9.4.0",
-    "node-fetch": "^2.5.0",
+    "node-fetch": "^2.6.1",
     "object-hash": "^2.0.3",
     "pg": "^8.3.2",
     "uuid": "^8.3.0"
