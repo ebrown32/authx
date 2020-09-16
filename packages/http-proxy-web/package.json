@@ -5,7 +5,7 @@
   },
   "bugs": "https://github.com/the-control-group/authx/issues",
   "dependencies": {
-    "@authx/scopes": "^3.1.0-alpha.18",
+    "@authx/scopes": "^3.1.0-alpha.29",
     "@types/cookies": "^0.7.4",
     "@types/http-proxy": "^1.17.4",
     "@types/jsonwebtoken": "^8.5.0",
@@ -44,7 +44,6 @@
   "license": "MIT",
   "main": "dist",
   "name": "@authx/http-proxy-web",
-  "peerDependencies": {},
   "repository": "https://github.com/the-control-group/authx",
   "scripts": {
     "format": "prettier --list-different --write '**/*.{json,yml,md,ts}'",
@@ -56,5 +55,5 @@
     "prepublishOnly": "yarn build"
   },
   "types": "./dist/index.d.ts",
-  "version": "3.1.0-alpha.18"
+  "version": "3.1.0-alpha.29"
 }
