@@ -64,5 +64,5 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-          run: "scripts/run-in-packages.sh yarn publish --no-git-tag-version --new-version $VERSION"
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > ~/.npmrc
+          scripts/run-in-packages.sh yarn publish --no-git-tag-version --new-version $VERSION
