@@ -23,12 +23,10 @@ jobs:
         with:
           node-version: "12.x"
       - name: Cache node modules
-        uses: actions/cache@v1
-        env:
-          cache-name: cache-node-modules
+        uses: actions/cache@v2
         with:
           path: "**/node_modules"
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
+          key: ${{ runner.os }}-build-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies and Test
         run: yarn install
       - name: Build
