@@ -49,7 +49,9 @@ jobs:
           export VERSION=`echo "$BASE_VERSION" | grep -Po '[0-9].*'`
           echo "::set-env name=VERSION::$VERSION"
       - name: Version
-        run: yarn run lerna version --no-git-tag-version -y "$VERSION"
+        run: |
+          yarn run lerna version --no-git-tag-version -y "$VERSION"
+          yarn format
       - name: Repush
         run: |
           git config --global user.name 'Github Actions'
