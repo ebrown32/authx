@@ -60,3 +60,9 @@ jobs:
           git tag -f -a "v$VERSION" -m "v$VERSION"
           git branch -va
           git push -f --tags
+      - name: Publish
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
+          run: "scripts/run-in-packages.sh yarn publish --no-git-tag-version --new-version $VERSION"
